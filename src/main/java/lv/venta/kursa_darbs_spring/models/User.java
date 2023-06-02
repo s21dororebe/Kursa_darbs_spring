@@ -2,6 +2,7 @@ package lv.venta.kursa_darbs_spring.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Table(name = "user_table")
@@ -13,6 +14,7 @@ import lombok.*;
 public class User extends Person {
 	//TODO what we do with password?
 	@Pattern(regexp="[A-Za-z0-9]{8,20}")
+	@Size(min=8, max=20)
 	private String encodedPassword;
 
 	@Column(name="email")
@@ -20,6 +22,7 @@ public class User extends Person {
 	private String email;
 
 	@Column(name="username")
+	@Size(min=8, max=20)
 	@Pattern(regexp="[a-z0-9.]{8,20}")
 	private String username;
 
