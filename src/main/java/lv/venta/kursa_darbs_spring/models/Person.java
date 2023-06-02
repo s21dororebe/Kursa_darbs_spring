@@ -27,8 +27,6 @@ public class Person {
     @Pattern(regexp ="^[A-Z][a-zA-Z ]{0,39}$", message = "1.burtam jabut lielam, tikai latinu burti, max 40 simboli")
     private String surname;
 
-
-
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
