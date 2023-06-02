@@ -26,11 +26,6 @@ public class User extends Person {
 	@Pattern(regexp="[a-z0-9.]{8,20}")
 	private String username;
 
-	public User(String email, String username) {
-		this.email = email;
-		this.username = username;
-	}
-
 	public User(String name, String surname, String email, String username) {
 		super(name, surname);
 		this.email = email;
